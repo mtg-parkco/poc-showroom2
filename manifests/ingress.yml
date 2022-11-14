@@ -11,7 +11,7 @@ spec:
       - path: /
         backend:
           service:
-            name: svc01
+            name: svc
             port:
               number: 80
         pathType: Exact

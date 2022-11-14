@@ -1,7 +1,7 @@
 apiVersion : apps/v1
 kind: Deployment
 metadata:
-  name: deploy01 
+  name: deploy
 spec:
   replicas: 3
   selector:
@@ -13,7 +13,7 @@ spec:
         app: web 
     spec:
       containers:
-        - name: repo01 
+        - name: repo
           image: acrpocshowroom.azurecr.io/devopstest
           ports:
           - containerPort: 80
