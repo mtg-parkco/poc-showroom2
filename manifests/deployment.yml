@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: deploy01 
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web
+  template:
+    metadata:
+      labels:
+        app: web 
+    spec:
+      containers:
+        - name: repo01 
+          image: acrpocshowroom.azurecr.io/devopstest
+          ports:
+          - containerPort: 80
