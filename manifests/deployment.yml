@@ -13,7 +13,7 @@ spec:
         app: web 
     spec:
       containers:
-        - name: repo
+        - name: pocshowroom
           image: acrpocshowroom.azurecr.io/devopstest
           ports:
           - containerPort: 80

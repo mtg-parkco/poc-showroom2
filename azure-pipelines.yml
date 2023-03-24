@@ -1,5 +1,5 @@
 trigger:
-- master
+- main
 
 resources:
 - repo: self
@@ -7,12 +7,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '7eb233d5-7779-4041-b9de-4b15428a03da'
-  imageRepository: 'devopstest'
-  containerRegistry: 'acrpocshowroom.azurecr.io'
+  dockerRegistryServiceConnection: '4250631e-5bd7-42db-ad09-6503dad27304'
+  imageRepository: 'pocshowroom'
+  containerRegistry: 'showroomacrsa2.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'acrpocshowrooma269-auth'
+  imagePullSecret: 'showroomacrsa2b525-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -36,8 +36,8 @@ stages:
         tags: |
           $(tag)
 
-#     - upload: manifests
-#       artifact: manifests
+    - upload: manifests
+      artifact: manifests
 
 - stage: Deploy
   displayName: Deploy stage
@@ -48,7 +48,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'devopsTest.default'
+    environment: 'PoCShowroom.default'
     strategy:
       runOnce:
         deploy:

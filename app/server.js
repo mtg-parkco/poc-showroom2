@@ -1,9 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 8080
+const port = 80
 
 app.get('/', (req, res) => {
-  res.send('ver1.1')
+  res.send('this is version 1')
 })
 
 app.listen(port, () => {
