@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: pocshowroom
-          image: showroomacrsa2.azurecr.io/devopstest
+          image: showroomacrsa2.azurecr.io/pocshowroom
           ports:
           - containerPort: 80
