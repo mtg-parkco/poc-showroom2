@@ -7,7 +7,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '4250631e-5bd7-42db-ad09-6503dad27304'
+  dockerRegistryServiceConnection: 'cd2325d2-aade-4603-ab4d-f4a1ded3e948'
   imageRepository: 'pocshowroom'
   containerRegistry: 'showroomacrsa2.azurecr.io'
   dockerfilePath: '**/Dockerfile'
@@ -72,4 +72,3 @@ stages:
                 $(imagePullSecret)
               containers: |
                 $(containerRegistry)/$(imageRepository):$(tag)
-
